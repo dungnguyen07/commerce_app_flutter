@@ -1,3 +1,4 @@
+import 'package:commerce_app/Screens/Login/login_screen.dart';
 import 'package:commerce_app/Screens/Welcome/components/background.dart';
 import 'package:commerce_app/components/button_component.dart';
 import 'package:commerce_app/constants.dart';
@@ -32,11 +33,18 @@ class Body extends StatelessWidget {
             ButtonComponent(
               text: 'LOGIN',
               onPressed: () {
-                print('Login, Pressed');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
               },
             ),
             ButtonComponent(
-              text: 'SIGN UP',
+              text: 'REGISTER',
               color: kPrimaryLightColor,
               textColor: Colors.black,
               onPressed: () {
