@@ -1,4 +1,5 @@
 import 'package:commerce_app/Screens/Login/login_screen.dart';
+import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/Screens/Welcome/components/background.dart';
 import 'package:commerce_app/components/button_component.dart';
 import 'package:commerce_app/constants.dart';
@@ -18,7 +19,10 @@ class Body extends StatelessWidget {
           children: [
             Text(
               'COMMERCE APP',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: kButtonColor),
             ),
             SizedBox(
               height: size.height * 0.03,
@@ -48,7 +52,14 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               onPressed: () {
-                print('Sign up, Pressed');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return RegisterScreen();
+                    },
+                  ),
+                );
               },
             )
           ],
