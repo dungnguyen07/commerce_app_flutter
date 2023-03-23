@@ -108,7 +108,7 @@ class RegisterBody extends StatelessWidget {
                 ),
               ],
             ),
-            OrDivide(),
+            const OrDivide(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

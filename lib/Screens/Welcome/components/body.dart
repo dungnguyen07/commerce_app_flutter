@@ -17,8 +17,8 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'COMMERCE APP',
+            const Text(
+              'ECOMMERCE APP',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
