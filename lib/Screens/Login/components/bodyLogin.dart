@@ -1,3 +1,4 @@
+import 'package:commerce_app/Screens/HomePage/homepage_screen.dart';
 import 'package:commerce_app/Screens/Login/components/background.dart';
 import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/components/button_component.dart';
@@ -19,7 +20,7 @@ class BodyLogin extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'LOGIN',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -40,7 +41,7 @@ class BodyLogin extends StatelessWidget {
               hintText: "Your Email",
               onChanged: (value) {},
             ),
-            TextFieldContainer(
+            const TextFieldContainer(
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -59,13 +60,15 @@ class BodyLogin extends StatelessWidget {
             ButtonComponent(
               text: 'LOGIN',
               onPressed: () {
-                print('LOGIN SUCCESS');
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HomePage();
+                }));
               },
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have an Account? ",
                   style: TextStyle(color: Colors.white, fontSize: 16.5),
                 ),
@@ -80,7 +83,7 @@ class BodyLogin extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     " Sign Up",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
