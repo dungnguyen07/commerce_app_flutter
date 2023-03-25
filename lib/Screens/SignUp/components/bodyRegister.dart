@@ -89,14 +89,7 @@ class RegisterBody extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return LoginScreen();
-                        },
-                      ),
-                    );
+                    Navigator.pushNamed(context, "login");
                   },
                   child: const Text(
                     " Sign In",

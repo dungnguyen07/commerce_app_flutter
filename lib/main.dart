@@ -1,3 +1,7 @@
+import 'package:commerce_app/Screens/Cart/cart.dart';
+import 'package:commerce_app/Screens/HomePage/homepage_screen.dart';
+import 'package:commerce_app/Screens/Login/login_screen.dart';
+import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/Screens/Welcome/welcome_screen.dart';
 import 'package:commerce_app/constants.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +21,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: kPrimaryColor, scaffoldBackgroundColor: Colors.white),
-      home: const WelcomeScreen(),
+      // home: const WelcomeScreen(),
+      routes: {
+        "/": (context) => WelcomeScreen(),
+        "login": (context) => LoginScreen(),
+        "register": (context) => RegisterScreen(),
+        "homePage": (context) => HomePage(),
+        "cart": (context) => CartScreen(),
+      },
     );
   }
 }
