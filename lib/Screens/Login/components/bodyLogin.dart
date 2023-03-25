@@ -60,9 +60,7 @@ class BodyLogin extends StatelessWidget {
             ButtonComponent(
               text: 'LOGIN',
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return HomePage();
-                }));
+                Navigator.pushNamed(context, "homePage");
               },
             ),
             Row(
@@ -74,14 +72,7 @@ class BodyLogin extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return RegisterScreen();
-                        },
-                      ),
-                    );
+                    Navigator.pushNamed(context, "register");
                   },
                   child: const Text(
                     " Sign Up",

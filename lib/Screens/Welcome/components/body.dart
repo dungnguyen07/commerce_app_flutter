@@ -37,14 +37,7 @@ class Body extends StatelessWidget {
             ButtonComponent(
               text: 'LOGIN',
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, "login");
               },
             ),
             ButtonComponent(
@@ -52,14 +45,7 @@ class Body extends StatelessWidget {
               color: kPrimaryLightColor,
               textColor: Colors.black,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return RegisterScreen();
-                    },
-                  ),
-                );
+                Navigator.pushNamed(context, "register");
               },
             )
           ],
