@@ -7,9 +7,16 @@ import 'package:commerce_app/components/textfield_container.dart';
 import 'package:commerce_app/constants.dart';
 import 'package:flutter/material.dart';
 
-class BodyLogin extends StatelessWidget {
+class BodyLogin extends StatefulWidget {
   const BodyLogin({super.key});
 
+  @override
+  State<BodyLogin> createState() => _BodyLoginState();
+}
+
+class _BodyLoginState extends State<BodyLogin> {
+  // show the password or not
+  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -41,20 +48,27 @@ class BodyLogin extends StatelessWidget {
               hintText: "Your Email",
               onChanged: (value) {},
             ),
-            const TextFieldContainer(
+            TextFieldContainer(
               child: TextField(
-                obscureText: true,
+                obscureText: _isObscure,
                 decoration: InputDecoration(
+                  icon: Icon(
+                    Icons.lock,
+                    color: kButtonColor,
+                  ),
+                  border: InputBorder.none,
+                  hintText: "Your Password",
+                  suffixIcon: IconButton(
                     icon: Icon(
-                      Icons.lock,
-                      color: kButtonColor,
-                    ),
-                    suffixIcon: Icon(
-                      Icons.visibility,
-                      color: kButtonColor,
-                    ),
-                    border: InputBorder.none,
-                    hintText: "Your Password"),
+                        _isObscure ? Icons.visibility : Icons.visibility_off),
+                    onPressed: () {
+                      setState(() {
+                        _isObscure = !_isObscure;
+                      });
+                    },
+                    color: kButtonColor,
+                  ),
+                ),
               ),
             ),
             ButtonComponent(
