@@ -33,10 +33,15 @@ class PopularItemWidget extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: Image.asset("assets/images/pizza.png",
-                              height: 130),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "product_detail");
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Image.asset("assets/images/pizza.png",
+                                height: 130),
+                          ),
                         ),
                         const Text(
                           "Hot Pizza",
@@ -96,10 +101,15 @@ class PopularItemWidget extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: Image.asset("assets/images/burger.png",
-                              height: 130),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "product_detail");
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Image.asset("assets/images/burger.png",
+                                height: 130),
+                          ),
                         ),
                         const Text(
                           "Hot Burger",
@@ -158,10 +168,15 @@ class PopularItemWidget extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: Image.asset("assets/images/salan.png",
-                              height: 130),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "product_detail");
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Image.asset("assets/images/salan.png",
+                                height: 130),
+                          ),
                         ),
                         const Text(
                           "Hot Salan",
@@ -220,10 +235,15 @@ class PopularItemWidget extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          alignment: Alignment.center,
-                          child: Image.asset("assets/images/biryani.png",
-                              height: 130),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "product_detail");
+                          },
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: Image.asset("assets/images/biryani.png",
+                                height: 130),
+                          ),
                         ),
                         const Text(
                           "Hot biryani",
@@ -282,11 +302,16 @@ class PopularItemWidget extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          alignment: Alignment.center,
-                          child: Image.asset("assets/images/drink.png",
-                              height: 120),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "product_detail");
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(5),
+                            alignment: Alignment.center,
+                            child: Image.asset("assets/images/drink.png",
+                                height: 120),
+                          ),
                         ),
                         const Text(
                           "Drinks",

@@ -4,8 +4,15 @@ import 'package:commerce_app/Screens/HomePage/components/drawer_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
+
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
+  dynamic _counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -92,20 +99,36 @@ class CartScreen extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Icon(
-                                      Icons.add,
-                                      color: Colors.white,
+                                    InkWell(
+                                      onTap: () {
+                                        setState(() {
+                                          _counter++;
+                                        });
+                                      },
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                     Text(
-                                      "7",
+                                      "$_counter",
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white),
                                     ),
-                                    Icon(
-                                      Icons.minimize,
-                                      color: Colors.white,
+                                    InkWell(
+                                      onTap: () {
+                                        if (_counter > 1) {
+                                          setState(() {
+                                            _counter--;
+                                          });
+                                        }
+                                      },
+                                      child: Icon(
+                                        Icons.minimize,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),
