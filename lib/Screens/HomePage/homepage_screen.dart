@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextFormField(
-                        obscureText: true,
+                        obscureText: false,
                         decoration: InputDecoration(
                             hintText: "Search items you need!",
                             border: InputBorder.none),
