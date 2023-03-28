@@ -6,8 +6,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
+
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  dynamic _counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -82,22 +89,38 @@ class DetailScreen extends StatelessWidget {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Icon(
-                                    CupertinoIcons.minus,
-                                    color: Colors.white,
-                                    size: 20,
+                                  InkWell(
+                                    onTap: () {
+                                      if (_counter > 1) {
+                                        setState(() {
+                                          _counter--;
+                                        });
+                                      }
+                                    },
+                                    child: Icon(
+                                      CupertinoIcons.minus,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
                                   ),
                                   Text(
-                                    "1",
+                                    "$_counter",
                                     style: TextStyle(
                                         fontSize: 17,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  Icon(
-                                    CupertinoIcons.add,
-                                    color: Colors.white,
-                                    size: 20,
+                                  InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        _counter++;
+                                      });
+                                    },
+                                    child: Icon(
+                                      CupertinoIcons.add,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
                                   )
                                 ],
                               ),
