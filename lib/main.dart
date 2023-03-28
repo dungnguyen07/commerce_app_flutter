@@ -1,6 +1,7 @@
 import 'package:commerce_app/Screens/Cart/cart.dart';
 import 'package:commerce_app/Screens/HomePage/homepage_screen.dart';
 import 'package:commerce_app/Screens/Login/login_screen.dart';
+import 'package:commerce_app/Screens/Product_Details/detail_screen.dart';
 import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/Screens/Welcome/welcome_screen.dart';
 import 'package:commerce_app/constants.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         "register": (context) => RegisterScreen(),
         "homePage": (context) => HomePage(),
         "cart": (context) => CartScreen(),
+        "product_detail": (context) => DetailScreen(),
       },
     );
   }
