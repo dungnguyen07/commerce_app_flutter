@@ -3,24 +3,29 @@ import 'package:commerce_app/Screens/HomePage/components/category_widget.dart';
 import 'package:commerce_app/Screens/HomePage/components/drawer_widget.dart';
 import 'package:commerce_app/Screens/HomePage/components/newestItem_widget.dart';
 import 'package:commerce_app/Screens/HomePage/components/popularItem_widget.dart';
-import 'package:commerce_app/constants.dart';
+import 'package:commerce_app/models/language_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F3),
+      backgroundColor: const Color(0xFFF5F5F3),
       body: ListView(
         children: [
           // AppBar
-          AppBarWidget(),
+          const AppBarWidget(),
           // Search
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
             child: Container(
               width: double.infinity,
               height: 50,
@@ -32,36 +37,36 @@ class HomePage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 10,
-                        offset: Offset(0, 3))
+                        offset: const Offset(0, 3))
                   ]),
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(children: [
-                  Icon(
+                  const Icon(
                     Icons.search,
                     color: Color(0xFFe4983e),
                   ),
-                  Container(
+                  SizedBox(
                     height: 50,
                     width: 300,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: TextFormField(
                         obscureText: false,
                         decoration: InputDecoration(
-                            hintText: "Search items you need!",
+                            hintText: translation(context).search,
                             border: InputBorder.none),
                       ),
                     ),
                   ),
-                  Icon(Icons.filter_list)
+                  const Icon(Icons.filter_list)
                 ]),
               ),
             ),
           ),
 
           // Category
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 20, left: 15),
             child: Text(
               "Categories",
@@ -70,10 +75,10 @@ class HomePage extends StatelessWidget {
           ),
 
           // CategoryWidget
-          CategoryWidget(),
+          const CategoryWidget(),
 
           //Popular Items
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 20, left: 15),
             child: Text(
               "Popular",
@@ -82,9 +87,9 @@ class HomePage extends StatelessWidget {
           ),
 
           // PopularItemWidget
-          PopularItemWidget(),
+          const PopularItemWidget(),
 
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top: 20, left: 15),
             child: Text(
               "Newest",
@@ -93,11 +98,11 @@ class HomePage extends StatelessWidget {
           ),
 
           // NewestItemWidget
-          NewestItemWidget(),
+          const NewestItemWidget(),
         ],
       ),
 
-      drawer: DrawerWidget(),
+      drawer: const DrawerWidget(),
 
       // floating button
       floatingActionButton: Container(
@@ -107,14 +112,14 @@ class HomePage extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 10,
-              offset: Offset(0, 3))
+              offset: const Offset(0, 3))
         ]),
         child: FloatingActionButton(
           backgroundColor: Colors.white,
           onPressed: () {
             Navigator.pushNamed(context, "cart");
           },
-          child: Icon(
+          child: const Icon(
             CupertinoIcons.cart_fill,
             size: 30,
             color: Color(0xFFe4983e),

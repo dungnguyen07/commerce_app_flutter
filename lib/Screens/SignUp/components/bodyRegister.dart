@@ -1,5 +1,5 @@
 import 'package:commerce_app/Screens/Login/components/background.dart';
-import 'package:commerce_app/Screens/Login/login_screen.dart';
+// import 'package:commerce_app/Screens/Login/login_screen.dart';
 import 'package:commerce_app/Screens/SignUp/components/divider.dart';
 import 'package:commerce_app/Screens/SignUp/components/social_icon.dart';
 import 'package:commerce_app/components/button_component.dart';
@@ -17,7 +17,7 @@ class RegisterBody extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         reverse: true,
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -77,6 +77,7 @@ class RegisterBody extends StatelessWidget {
             ButtonComponent(
               text: 'REGISTER',
               onPressed: () {
+                // ignore: avoid_print
                 print('REGISTER SUCCESS');
               },
             ),

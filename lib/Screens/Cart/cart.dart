@@ -1,7 +1,6 @@
 import 'package:commerce_app/Screens/Cart/components/cart_navbar.dart';
 import 'package:commerce_app/Screens/HomePage/components/AppBarWidget.dart';
 import 'package:commerce_app/Screens/HomePage/components/drawer_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
@@ -16,19 +15,18 @@ class _CartScreenState extends State<CartScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Scaffold(
-      backgroundColor: Color(0xFFF5F5F3),
+    return Scaffold(
+      backgroundColor: const Color(0xFFF5F5F3),
       body: ListView(
         children: [
           SingleChildScrollView(
             child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppBarWidget(),
-                    Padding(
+                    const AppBarWidget(),
+                    const Padding(
                       padding: EdgeInsets.only(top: 20, left: 10, bottom: 10),
                       child: Text(
                         "Order List",
@@ -37,7 +35,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
                         width: 380,
                         height: 120,
@@ -49,7 +47,7 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
                         child: Row(
                           children: [
@@ -61,7 +59,7 @@ class _CartScreenState extends State<CartScreen> {
                                 width: 145,
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               width: 190,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,11 +87,11 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Container(
-                                padding: EdgeInsets.all(7),
+                                padding: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFe4983e),
+                                    color: const Color(0xFFe4983e),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Column(
                                   mainAxisAlignment:
@@ -105,14 +103,14 @@ class _CartScreenState extends State<CartScreen> {
                                           _counter++;
                                         });
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.add,
                                         color: Colors.white,
                                       ),
                                     ),
                                     Text(
                                       "$_counter",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white),
@@ -125,7 +123,7 @@ class _CartScreenState extends State<CartScreen> {
                                           });
                                         }
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.minimize,
                                         color: Colors.white,
                                       ),
@@ -139,7 +137,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
                         width: 380,
                         height: 120,
@@ -151,7 +149,7 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
                         child: Row(
                           children: [
@@ -163,7 +161,7 @@ class _CartScreenState extends State<CartScreen> {
                                 width: 145,
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               width: 190,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,13 +189,13 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Container(
-                                padding: EdgeInsets.all(7),
+                                padding: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFe4983e),
+                                    color: const Color(0xFFe4983e),
                                     borderRadius: BorderRadius.circular(10)),
-                                child: Column(
+                                child: const Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -225,7 +223,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
                         width: 380,
                         height: 120,
@@ -237,7 +235,7 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
                         child: Row(
                           children: [
@@ -249,7 +247,7 @@ class _CartScreenState extends State<CartScreen> {
                                 width: 145,
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               width: 190,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -277,13 +275,13 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Container(
-                                padding: EdgeInsets.all(7),
+                                padding: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFe4983e),
+                                    color: const Color(0xFFe4983e),
                                     borderRadius: BorderRadius.circular(10)),
-                                child: Column(
+                                child: const Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -311,7 +309,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
                         width: 380,
                         height: 120,
@@ -323,7 +321,7 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
                         child: Row(
                           children: [
@@ -335,7 +333,7 @@ class _CartScreenState extends State<CartScreen> {
                                 width: 145,
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               width: 190,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -363,13 +361,13 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Container(
-                                padding: EdgeInsets.all(7),
+                                padding: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFe4983e),
+                                    color: const Color(0xFFe4983e),
                                     borderRadius: BorderRadius.circular(10)),
-                                child: Column(
+                                child: const Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -397,7 +395,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
                         width: 380,
                         height: 120,
@@ -409,7 +407,7 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
                         child: Row(
                           children: [
@@ -421,7 +419,7 @@ class _CartScreenState extends State<CartScreen> {
                                 width: 145,
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               width: 190,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -449,13 +447,13 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Container(
-                                padding: EdgeInsets.all(7),
+                                padding: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                    color: Color(0xFFe4983e),
+                                    color: const Color(0xFFe4983e),
                                     borderRadius: BorderRadius.circular(10)),
-                                child: Column(
+                                child: const Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
@@ -483,10 +481,10 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 30),
                       child: Container(
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
@@ -495,9 +493,9 @@ class _CartScreenState extends State<CartScreen> {
                                   color: Colors.grey.withOpacity(0.5),
                                   spreadRadius: 3,
                                   blurRadius: 10,
-                                  offset: Offset(0, 3))
+                                  offset: const Offset(0, 3))
                             ]),
-                        child: Column(
+                        child: const Column(
                           children: [
                             Padding(
                               padding: EdgeInsets.symmetric(vertical: 10),
@@ -588,8 +586,8 @@ class _CartScreenState extends State<CartScreen> {
           )
         ],
       ),
-      drawer: DrawerWidget(),
-      bottomNavigationBar: CartBottomNavBar(),
-    ));
+      drawer: const DrawerWidget(),
+      bottomNavigationBar: const CartBottomNavBar(),
+    );
   }
 }

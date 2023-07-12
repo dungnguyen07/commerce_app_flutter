@@ -1,11 +1,13 @@
-import 'package:commerce_app/Screens/HomePage/homepage_screen.dart';
+// import 'package:commerce_app/Screens/HomePage/homepage_screen.dart';
 import 'package:commerce_app/Screens/Login/components/background.dart';
-import 'package:commerce_app/Screens/SignUp/register_screen.dart';
+// import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/components/button_component.dart';
 import 'package:commerce_app/components/inputfield_container.dart';
 import 'package:commerce_app/components/textfield_container.dart';
 import 'package:commerce_app/constants.dart';
+import 'package:commerce_app/models/language_constants.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({super.key});
@@ -23,13 +25,13 @@ class _BodyLoginState extends State<BodyLogin> {
     return Background(
       child: SingleChildScrollView(
         reverse: true,
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'LOGIN',
-              style: TextStyle(
+            Text(
+              translation(context).login,
+              style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 27,
                   color: kButtonColor),
@@ -52,7 +54,7 @@ class _BodyLoginState extends State<BodyLogin> {
               child: TextField(
                 obscureText: _isObscure,
                 decoration: InputDecoration(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.lock,
                     color: kButtonColor,
                   ),
