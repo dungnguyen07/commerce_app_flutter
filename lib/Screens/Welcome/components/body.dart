@@ -1,9 +1,8 @@
-import 'package:commerce_app/Screens/Login/login_screen.dart';
-import 'package:commerce_app/Screens/SignUp/register_screen.dart';
 import 'package:commerce_app/Screens/Welcome/components/background.dart';
 import 'package:commerce_app/components/button_component.dart';
 import 'package:commerce_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:commerce_app/models/language_constants.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -35,13 +34,13 @@ class Body extends StatelessWidget {
               height: size.height * 0.04,
             ),
             ButtonComponent(
-              text: 'LOGIN',
+              text: translation(context).login,
               onPressed: () {
                 Navigator.pushNamed(context, "login");
               },
             ),
             ButtonComponent(
-              text: 'REGISTER',
+              text: translation(context).signup,
               color: kPrimaryLightColor,
               textColor: Colors.black,
               onPressed: () {

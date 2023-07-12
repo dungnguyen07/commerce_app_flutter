@@ -9,7 +9,7 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 decoration: BoxDecoration(color: Color(0xFFe4983e)),
@@ -30,14 +30,14 @@ class DrawerWidget extends StatelessWidget {
           //single List Item
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
             onPressed: () {
               Navigator.pushNamed(context, "homePage");
             },
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(
                 Icons.home,
                 color: Color(0xFFe4983e),
@@ -50,12 +50,12 @@ class DrawerWidget extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
             onPressed: () {},
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(
                 Icons.person,
                 color: Color(0xFFe4983e),
@@ -68,14 +68,14 @@ class DrawerWidget extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
             onPressed: () {
               Navigator.pushNamed(context, "cart");
             },
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(
                 CupertinoIcons.cart_fill,
                 color: Color(0xFFe4983e),
@@ -88,12 +88,14 @@ class DrawerWidget extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
-            onPressed: () {},
-            child: ListTile(
+            onPressed: () {
+              Navigator.pushNamed(context, "wishlist");
+            },
+            child: const ListTile(
               leading: Icon(
                 CupertinoIcons.heart_fill,
                 color: Color(0xFFe4983e),
@@ -106,12 +108,12 @@ class DrawerWidget extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
             onPressed: () {},
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(
                 Icons.settings,
                 color: Color(0xFFe4983e),
@@ -124,14 +126,14 @@ class DrawerWidget extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: BorderSide(
+              side: const BorderSide(
                 color: Colors.transparent,
               ),
             ),
             onPressed: () {
               Navigator.pushNamed(context, "login");
             },
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(
                 Icons.exit_to_app,
                 color: Color(0xFFe4983e),

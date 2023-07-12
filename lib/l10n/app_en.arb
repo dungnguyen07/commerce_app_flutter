@@ -1,0 +1,11 @@
+{
+    "login":"Login",
+    "search":"Search",
+    "category":"Categories",
+    "popular":"Popular",
+    "hot":"Hot",
+    "newest":"Newest",
+    "signup":"Sign up",
+    "hintEmail":"Enter your email",
+    "hintPass":"Enter your password"
+}

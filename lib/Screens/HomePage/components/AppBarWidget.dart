@@ -1,3 +1,6 @@
+import 'package:commerce_app/main.dart';
+import 'package:commerce_app/models/language.dart';
+import 'package:commerce_app/models/language_constants.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -6,14 +9,14 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         InkWell(
           onTap: () {
             Scaffold.of(context).openDrawer();
           },
           child: Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
@@ -22,16 +25,16 @@ class AppBarWidget extends StatelessWidget {
                     color: Colors.grey.withOpacity(0.5),
                     spreadRadius: 2,
                     blurRadius: 10,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   )
                 ]),
-            child: Icon(Icons.menu),
+            child: const Icon(Icons.menu),
           ),
         ),
         InkWell(
           onTap: () {},
           child: Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
@@ -40,10 +43,39 @@ class AppBarWidget extends StatelessWidget {
                     color: Colors.grey.withOpacity(0.5),
                     spreadRadius: 2,
                     blurRadius: 10,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   )
                 ]),
-            child: Icon(Icons.notifications),
+            child: Padding(
+              padding: const EdgeInsets.all(0),
+              child: DropdownButton<Language>(
+                underline: const SizedBox(),
+                icon: const Icon(Icons.language, color: Colors.black),
+                onChanged: (Language? language) async {
+                  if (language != null) {
+                    Locale locale = await setLocale(language.languageCode);
+
+                    // ignore: use_build_context_synchronously
+                    MyApp.setLocale(context, locale);
+                  }
+                },
+                items: Language.languageList()
+                    .map<DropdownMenuItem<Language>>((e) => DropdownMenuItem(
+                          value: e,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                e.flag,
+                                style: const TextStyle(fontSize: 30),
+                              ),
+                              Text(e.name)
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              ),
+            ),
           ),
         )
       ]),

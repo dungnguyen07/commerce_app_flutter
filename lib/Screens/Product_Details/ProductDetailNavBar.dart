@@ -8,12 +8,12 @@ class ProductDetailNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
+            const Row(
               children: [
                 Text(
                   "Total:",
@@ -34,14 +34,15 @@ class ProductDetailNavBar extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {},
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFFe4983e)),
+                  backgroundColor:
+                      MaterialStateProperty.all(const Color(0xFFe4983e)),
                   padding: MaterialStateProperty.all(
-                      EdgeInsets.symmetric(vertical: 13, horizontal: 15)),
+                      const EdgeInsets.symmetric(vertical: 13, horizontal: 15)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)))),
-              icon: Icon(CupertinoIcons.cart_fill),
-              label: Text(
+              icon: const Icon(CupertinoIcons.cart_fill),
+              label: const Text(
                 "Add To Cart",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),

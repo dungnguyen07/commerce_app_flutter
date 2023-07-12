@@ -17,7 +17,7 @@ class ButtonComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
@@ -25,7 +25,7 @@ class ButtonComponent extends StatelessWidget {
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(color),
                 padding: MaterialStateProperty.all<EdgeInsets>(
-                    EdgeInsets.symmetric(vertical: 18, horizontal: 30))),
+                    const EdgeInsets.symmetric(vertical: 18, horizontal: 30))),
             onPressed: onPressed,
             child: Text(
               text,
